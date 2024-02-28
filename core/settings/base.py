@@ -1,6 +1,5 @@
 from pathlib import Path
 import os
-
 from django.utils.translation import gettext_lazy as _
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,16 +15,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 DJANGO_APPS = [
-    'modeltranslation',
-    'jazzmin',
+    "modeltranslation",
+    "jazzmin",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-
 ]
 
 CUSTOM_APPS = [
