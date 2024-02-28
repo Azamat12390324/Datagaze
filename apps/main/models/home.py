@@ -43,3 +43,21 @@ class Slider(OrderModel):
 
     def __str__(self):
         return self.title
+
+ class Victory(OrderModel):
+     title = models.CharField(max_length=255, verbose_name=_("title"))
+     description = models.TextField(verbose_name=_("description"))
+     icon = models.ImageField(upload_to='victory/image/', verbose_name=_("icon"))
+
+     class Meta:
+       db_table = 'victory'
+       verbose_name = _("Victory")
+       verbose_name_plural = _("4 Victories")
+       ordering = ("order",)
+
+     def __str__(self):
+      return self.title
+
+
+
+
