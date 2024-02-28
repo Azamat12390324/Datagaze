@@ -29,3 +29,17 @@ class SubNavbar(OrderModel):
    def __str__(self):
       return self.name
 
+
+class Slider(OrderModel):
+    title  = models.CharField(max_length=255, verbose_name=_("title"))
+    sub_title = models.CharField(max_length=255, verbose_name=_("sub_title"))
+    image = models.ImageField(upload_to='slider/image', verbose_name=_("image"))
+
+    class Meta:
+        db_table = 'slider'
+        verbose_name = _("Slider")
+        verbose_name_plural = _("3 Sliders")
+        ordering = ("order",)
+
+    def __str__(self):
+        return self.title
