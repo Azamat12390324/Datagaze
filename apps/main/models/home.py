@@ -81,7 +81,7 @@ class Slider(OrderModel):
        verbose_name = _("Partner")
        verbose_name_plural = _("6 Partners")
        ordering = ("order",)
-     
+
      def __str__(self):
        return self.name
 
@@ -99,3 +99,15 @@ class Slider(OrderModel):
       return self.email
 
 
+ class SocialMedia(OrderModel):
+     icon = models.ImageField(upload_to="socialmedia/image/", verbose_name=_("icon"))
+     url = models.URLField(max_length=255, verbose_name=_("link"))
+
+     class Meta:
+       db_table = 'socialMedia'
+       verbose_name = _("SocialMedia")
+       verbose_name_plural = _("8 SocialMedias")
+       ordering = ("order",)
+
+     def __str__(self):
+      return self.icon
