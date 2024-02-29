@@ -56,7 +56,22 @@ class Slider(OrderModel):
        ordering = ("order",)
 
      def __str__(self):
+         return self.title
+
+ class Statistic(OrderModel, ActiveModel):
+     title = models.CharField(max_length=255, verbose_name=_("title"))
+     number = models.IntegerField(verbose_name=_("number"))
+     icon = models.ImageField(upload_to="statistic/image/", verbose_name=_("icon"))
+
+     class Meta:
+       db_table = 'statistic'
+       verbose_name = _("Statistic")
+       verbose_name_plural = _("5 Statistics")
+       ordering = ("order",)
+
+     def __str__(self):
       return self.title
+
 
 
 
