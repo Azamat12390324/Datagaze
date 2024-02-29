@@ -23,19 +23,21 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
 
 CUSTOM_APPS = [
     "apps.common",
     "apps.main",
+    'ckeditor'
 ]
 
 
 THIRD_PARTY_APPS = [
     "rest_framework",
     "ckeditor",
-    "ckeditor_uploader",
-]
+    "ckeditor_uploader"
+ ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
 

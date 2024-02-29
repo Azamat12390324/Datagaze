@@ -11,7 +11,7 @@ class BaseModel(models.Model):
 
 
 class ActiveModel(models.Model):
-    active = models.BooleanField(default=True, verbose_name=_('active'))
+     active = models.BooleanField(default=True, verbose_name=_("active"))
 
     class Meta:
         abstract = True
