@@ -72,7 +72,18 @@ class Slider(OrderModel):
      def __str__(self):
       return self.title
 
+ class Partner(OrderModel):
+     name = models.CharField(max_length=255, verbose_name=_("name"))
+     url = models.URLField(max_length=255, verbose_name=_("link"))
+     icon = models.ImageField(upload_to="partner/image/", verbose_name=_("icon"))
 
+     class Meta:
+       db_table = 'partner'
+       verbose_name = _("Partner")
+       verbose_name_plural = _("6 Partners")
+       ordering = ("order",)
 
+     def __str__(self):
+      return self.name
 
 
