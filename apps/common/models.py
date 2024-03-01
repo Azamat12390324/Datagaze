@@ -10,16 +10,17 @@ class BaseModel(models.Model):
         abstract = True
 
 
-class ActiveModel(models.Model):
-     active = models.BooleanField(default=True, verbose_name=_("active"))
-
-    class Meta:
-        abstract = True
-
-
 class OrderModel(models.Model):
     order = models.IntegerField(verbose_name=_('order'))
 
     class Meta:
         abstract = True
+
+
+class ActiveModel(models.Model):
+    active = models.BooleanField(default=True, verbose_name=_("active"))
+
+    class Meta:
+        abstract = True
+
 
