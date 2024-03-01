@@ -125,10 +125,14 @@ class About(BaseModel):
     description = models.TextField(verbose_name=_("description"))
 
     class Meta:
-        db_table = 'SocialMedia'
-        verbose_name = _("SocialMedia")
-        verbose_name_plural = _("8 SocialMedias")
+        db_table = 'About'
+        verbose_name = _("About")
+        verbose_name_plural = _("9 Abouts")
         ordering = ("order",)
 
     def __str__(self):
         return self.title
+
+
+
+class Cer
