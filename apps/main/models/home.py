@@ -134,5 +134,16 @@ class About(BaseModel):
         return self.title
 
 
+class Certificate(OrderModel, ActiveModel):
+    image = models.ImageField(upload_to="certificate/image/", verbose_name=_("image"))
 
-class Cer
+    class Meta:
+        db_table = 'certificate'
+        verbose_name = _("Certificate")
+        verbose_name_plural = _("10 Certificates")
+        ordering = ("order",)
+
+    def __str__(self):
+        return self.image
+
+
